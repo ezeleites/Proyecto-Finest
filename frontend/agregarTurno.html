@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHeader.css">
+    <link rel="stylesheet" href="styleAgregar.css">
+    <link rel="stylesheet" href="styleFooter.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="listadoTurnos.html">Turnos</a></li>
+            <li><a href="agregarTurno.html">Altas</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <form id="formTurno">
+        <label for="" id="nombre">Nombre</label>
+        <input type="text">
+
+        <label for="" id="apellido">Apellido</label>
+        <input type="text">
+
+        <label for="" id="cedula">Cedula</label>
+        <input type="number" name="" id="">
+
+        <label for="" id="telefono">Telefono</label>
+        <input type="number">
+
+        <label>Especialidad</label>
+        <select id="especialidad"></select>
+
+        <label>Profesional</label>
+        <select id="profesional"></select>
+        
+        <label for="" id="fecha_hora">Fecha y Hora</label>
+        <input type="datetime-local">
+
+        <label for="" id="observaciones">Observaciones</label>
+        <input type="text">
+    </form>
+
+    <script src="../backend/agregar_turno.js"></script>
+</body>
+</html>

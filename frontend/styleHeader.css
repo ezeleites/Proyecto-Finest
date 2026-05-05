@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9bd7ff;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 8px 14px;
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.menu ul li:hover {
+    transform: translate(-2px);
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+.menu ul li a:hover {
+    color: #333;
+}

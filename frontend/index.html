@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHeader.css">
+    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="stylesheet" href="styleFooter.css">
+    <title>Sistema de Gestion de Turnos</title>
+</head>
+<body>
+    <header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="listadoTurnos.html">Turnos</a></li>
+            <li><a href="agregarTurno.html">Altas</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="banner">
+        <div class="banner_texto">
+            <p>Bienvenido a nuestro sistema de gestión de turnos para consultorios.
+            <p>Permite agendar citas, ver disponibilidad en tiempo real y administrar </p>
+            <p>reservas de forma rápida, simple y segura desde cualquier dispositivo.</p>
+        </div>
+    </div>
+
+    <h3 class="title">Turnos</h3>
+    
+    <div class="contenedor_table">
+        <table border="1" class="table_turnos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Cedula</th>
+                    <th>Fecha</th>
+                    <th>Especialidad</th>
+                    <th>Profesional</th>
+                    <th>Observaciones</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyTurnos"></tbody>
+        </table>
+    </div>
+    <div class="cont_button">
+        <button class="button" onclick="window.location.href='agregarTurno.html'">
+            Sacar Turno
+        </button>
+    </div>
+
+    <footer>
+        <p>Derechos Reservados PulgaLeitesCrackMastodonte 2026</p>
+    </footer>
+
+    <script src="../controllers/turnos.js"></script>
+   
+</body>
+</html>
