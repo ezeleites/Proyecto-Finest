@@ -23,6 +23,11 @@ async function obtenerTurnos() {
                     <td>${turno.nombre_profesional} ${turno.apellido_profesional}</td>
                     <td>${turno.observaciones || ""}</td>
                     <td>${turno.estado}</td>
+                    <td>
+                        <span class="estado ${turno.estado}">
+                            ${turno.estado}
+                        </span>
+                    </td>
                 </tr>
             `;
         });
@@ -42,4 +47,15 @@ function formatearFecha(fecha) {
         hour: "2-digit",
         minute: "2-digit"
     });
+}
+
+async function eliminarTurno(id) {
+    if (!confirm("¿Seguro que querés eliminar este turno?")) return;
+
+    await fetch(`http://localhost:3000/turnos/${id}`, {
+        method: "DELETE"
+    });
+
+    alert("Turno eliminado");
+    location.reload();
 }

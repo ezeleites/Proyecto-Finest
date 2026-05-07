@@ -178,6 +178,68 @@ app.get("/profesionales/:id_especialidad", (req, res) => {
     });
 });
 
+app.get("/pacientes/cedula/:cedula", (req, res) => {
+
+    const cedula = req.params.cedula;
+
+    const sql = "SELECT * FROM pacientes WHERE cedula = ?";
+
+    conexion.query(sql, [cedula], (error, resultados) => {
+
+        if (error) {
+            return res.status(500).json(error);
+        }
+
+        if (resultados.length === 0) {
+            return res.status(404).json({
+                error: "Paciente no encontrado"
+            });
+        }
+
+        res.json(resultados[0]);
+
+    });
+});
+
+app.post("/pacientes", (req, res) => {
+
+    const { nombre, apellido, cedula, telefono } = req.body;
+
+    if (!nombre || !apellido || !cedula) {
+        return res.status(400).json({
+            error: "Faltan datos"
+        });
+    }
+
+    const sql = `
+        INSERT INTO pacientes(nombre, apellido, cedula, telefono)
+        VALUES (?, ?, ?, ?)
+    `;
+
+    conexion.query(
+        sql,
+        [nombre, apellido, cedula, telefono],
+        (error, resultado) => {
+
+            if (error) {
+
+                if (error.code === "ER_DUP_ENTRY") {
+                    return res.status(400).json({
+                        error: "La cédula ya existe"
+                    });
+                }
+
+                return res.status(500).json(error);
+            }
+
+            res.status(201).json({
+                mensaje: "Paciente creado",
+                id: resultado.insertId
+            });
+        }
+    );
+});
+
 app.listen(3000, ()=>{
     console.log("Servidor corriendo en http://localhost:3000");
 });

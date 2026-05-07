@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleFooter.css">
+    <link rel="stylesheet" href="styleHeader.css">
+    <link rel="stylesheet" href="styleListado.css">
+    <title>Listado de Turnos</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="listadoTurnos.html">Turnos</a></li>
+                <li><a href="agregarTurno.html">Altas</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <section class="seccion">
+
+    <h1 class="titulo">Listado de Turnos</h1>
+
+    <div class="contenedor_table">
+
+        <table class="table_turnos">
+
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Teléfono</th>
+                    <th>Cédula</th>
+                    <th>Fecha</th>
+                    <th>Especialidad</th>
+                    <th>Profesional</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbodyTurnos">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<script src="../controllers/listadoTurnos.js"></script>
+    </main>
+
+    <footer class="footer">
+    <div class="footer_contenido">
+        <p class="footer_titulo">Sistema de Turnos</p>
+
+        <p>Gestión simple y eficiente de citas médicas</p>
+
+        <div class="footer_links">
+            <a href="index.html">Inicio</a>
+            <a href="listadoTurnos.html">Turnos</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <p class="footer_copy">
+            © 2026 PulgaLeitesCrackMastodonte - Todos los derechos reservados
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

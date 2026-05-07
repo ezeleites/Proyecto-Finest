@@ -21,31 +21,51 @@
     </header>
 
     <form id="formTurno">
-        <label for="" id="nombre">Nombre</label>
-        <input type="text">
 
-        <label for="" id="apellido">Apellido</label>
-        <input type="text">
+        <label>Nombre</label>
+        <input type="text" id="nombre" required>
 
-        <label for="" id="cedula">Cedula</label>
-        <input type="number" name="" id="">
+        <label>Apellido</label>
+        <input type="text" id="apellido" required>
 
-        <label for="" id="telefono">Telefono</label>
-        <input type="number">
+        <label>Cédula</label>
+        <input type="number" id="cedula" required>
+
+        <label>Teléfono</label>
+        <input type="number" id="telefono">
 
         <label>Especialidad</label>
-        <select id="especialidad"></select>
+        <select id="especialidad" required></select>
 
         <label>Profesional</label>
-        <select id="profesional"></select>
-        
-        <label for="" id="fecha_hora">Fecha y Hora</label>
-        <input type="datetime-local">
+        <select id="profesional" required></select>
 
-        <label for="" id="observaciones">Observaciones</label>
-        <input type="text">
+        <label>Fecha y Hora</label>
+        <input type="datetime-local" id="fecha_hora" required>
+
+        <label>Observaciones</label>
+        <input type="text" id="observaciones">
+
+        <button type="submit">Guardar Turno</button>
     </form>
 
+    <footer class="footer">
+        <div class="footer_contenido">
+            <p class="footer_titulo">Sistema de Turnos</p>
+
+            <p>Gestión simple y eficiente de citas médicas</p>
+
+            <div class="footer_links">
+                <a href="index.html">Inicio</a>
+                <a href="listadoTurnos.html">Turnos</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <p class="footer_copy">
+                © 2026 PulgaLeitesCrackMastodonte - Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
     <script src="../backend/agregar_turno.js"></script>
 </body>
 </html>
